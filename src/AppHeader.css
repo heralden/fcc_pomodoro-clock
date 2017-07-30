@@ -1,0 +1,33 @@
+.AppHeader {
+  background-color: hsl(5, 50%, 35%);
+  padding: 1em;
+  color: white;
+  text-align: center;
+  overflow: hidden;
+}
+
+.AppName {
+  display: inline;
+  margin: 1em;
+  float: left;
+}
+
+.Input {
+  margin: 1em;
+}
+
+button {
+  float: right;
+}
+
+label {
+  display: block;
+}
+
+.break-slider {
+  float: right;
+}
+
+.session-slider {
+  float: right;
+}
