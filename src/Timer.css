@@ -1,5 +1,6 @@
 .Timer {
   background-color: red;
+  cursor: pointer;
   width: 100%;
   height: 100%;
 }
@@ -12,6 +13,7 @@
   font-size: 6em;
   font-weight: lighter;
   color: hsl(5, 50%, 35%);
+  z-index: 1;
 }
 
 .flex-container {
@@ -30,5 +32,10 @@
   background-color: lightgray;
   height: 10%;
   width: 10%;
+  animation: fadein 2s;
 }
 
+@keyframes fadein { 
+  from { opacity: 0; } 
+  to { opacity: 1; } 
+}
