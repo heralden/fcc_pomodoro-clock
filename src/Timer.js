@@ -4,7 +4,7 @@ import './Timer.css';
 class Timer extends Component {
   componentDidMount() {
     this.intervalID = setInterval(
-      () => this.props.pause || this.props.decTimer(),
+      () => clockTick(this.props),
       1000
     );
   }
@@ -47,6 +47,14 @@ const FlexItem = props => (
   <li className="flex-item"/>
 );
 
+const clockTick = ({ timer, pause, decTimer, sessionChange }) => {
+  if (timer < 1) {
+    sessionChange();
+  } else if (!pause) {
+    decTimer();
+  }
+}
+
 const formatSeconds = sec => {
   let minutes = parseInt(sec / 60, 10);
   let seconds = sec % 60;
@@ -56,9 +64,9 @@ const formatSeconds = sec => {
 }
 
 const percentage = (session, timer, breakTime, sessionTime) => {
-  let targetTime = breakTime;
-  if (session)
-    targetTime = sessionTime;
-
-  return 100 - parseInt(timer / targetTime * 100, 10);
+  if (session) {
+    return 100 - parseInt(timer / sessionTime * 100, 10);
+  } else {
+    return parseInt(timer / breakTime * 100, 10);
+  }
 }

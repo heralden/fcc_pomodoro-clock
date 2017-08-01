@@ -32,7 +32,8 @@
   background-color: lightgray;
   height: 10%;
   width: 10%;
-  animation: fadein 2s;
+  opacity: 1;
+  transition: opacity 1000ms linear;
 }
 
 @keyframes fadein { 

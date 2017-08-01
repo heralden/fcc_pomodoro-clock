@@ -41,6 +41,12 @@ class App extends Component {
       timer: prevState.timer - 1
     }));
   }
+  sessionChange = () => {
+    this.setState(prevState => ({
+      session: !prevState.session,
+      timer: !prevState.session ? prevState.sessionTime : prevState.breakTime
+    }));
+  }
 
   render() {
     return (
@@ -59,6 +65,7 @@ class App extends Component {
           decTimer={this.decTimer}
           onClick={this.handleClick}
           session={this.state.session}
+          sessionChange={this.sessionChange}
         />
       </div>
     );

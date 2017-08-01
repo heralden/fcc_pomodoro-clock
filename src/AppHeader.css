@@ -4,6 +4,8 @@
   color: white;
   text-align: center;
   overflow: hidden;
+  box-sizing: border-box;
+  height: 15%;
 }
 
 .AppName {
