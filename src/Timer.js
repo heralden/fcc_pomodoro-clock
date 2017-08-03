@@ -37,7 +37,7 @@ export default Timer;
 
 const TimerBackground = ({ perc }) => (
   <ul className="flex-container">
-    {Array(perc).fill('').map(e => 
+    {Array(perc).fill('').map(e =>
       <FlexItem />
     )}
   </ul>

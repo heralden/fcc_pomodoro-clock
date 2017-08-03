@@ -32,11 +32,4 @@
   background-color: lightgray;
   height: 10%;
   width: 10%;
-  opacity: 1;
-  transition: opacity 1000ms linear;
-}
-
-@keyframes fadein { 
-  from { opacity: 0; } 
-  to { opacity: 1; } 
 }

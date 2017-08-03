@@ -30,10 +30,11 @@ class App extends Component {
   }
   handleReset = () => {
     this.setState(prevState => ({
-      pause: true,
       breakTime: prevState.breakLen * 60,
       sessionTime: prevState.sessionLen * 60,
-      timer: prevState.sessionLen * 60
+      timer: prevState.sessionLen * 60,
+      pause: true,
+      session: true
     }));
   }
   decTimer = () => {
